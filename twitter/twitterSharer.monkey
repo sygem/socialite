@@ -4,13 +4,6 @@ Import socialite
 '#Error "The Twitter module is only available on the android and ios targets"
 #End
 
-'#if not TWITTER_API_ENDPOINT
-'#TWITTER_API_ENDPOINT="https://api.twitter.com/1.1/"
-'#endif
-
-'#if not TWITTER_UPLOAD_ENDPOINT
-'#TWITTER_UPLOAD_ENDPOINT="https://api.twitter.com/1.1/"
-'#endif
 #if not TWITTER_CALLBACK_URL
 #TWITTER_CALLBACK_URL = "x-oauthflow-twitter://twitterlogin"
 #endif
@@ -44,7 +37,7 @@ Class TwitterSharer Extends NativeTwitterSharer Implements ISharer
         NativeShareText(text)
     End
 
-    Method SetSocialListener:Void(listener:SocialListener)
+    Method SetPostListener:Void(listener:SocialListener)
         SetListener(listener)
     End
 End
