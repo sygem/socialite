@@ -37,7 +37,7 @@ Class TwitterSharer Extends NativeTwitterSharer Implements ISharer
         NativeShareText(text)
     End
 
-    Method SetPostListener:Void(listener:SocialListener)
+    Method SetPostListener:Void(listener:PostListener)
         SetListener(listener)
     End
 End
@@ -54,7 +54,7 @@ Class NativeTwitterSharer
     End
     Method Init:Void()
     End
-    Method SetListener:Void(listener:SocialListener)
+    Method SetListener:Void(listener:PostListener)
     End
 End
 
@@ -66,7 +66,7 @@ Class NativeTwitterSharer
     Private
     Method NativeShareText:Void(text:String)
     Method Init:Void()
-    Method SetListener:Void(listener:SocialListener)
+    Method SetListener:Void(listener:PostListener)
 
 End
 

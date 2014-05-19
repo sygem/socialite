@@ -26,7 +26,7 @@ import com.sygem.monkey.socialite.twitter.*;
 
 class NativeTwitterSharer {
 
-    private SocialNetworkListener listener;
+    private SocialPostListener listener;
     private SharedPreferences prefs;
     private Handler mTwitterHandler;
     private TwitterUtils utils = new TwitterUtils();
@@ -58,7 +58,7 @@ class NativeTwitterSharer {
         });
     }
     
-    public void SetListener(SocialNetworkListener listener) {
+    public void SetListener(SocialPostListener listener) {
         this.listener = listener;
     }
     
