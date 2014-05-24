@@ -35,7 +35,7 @@ class NativeFacebookSharer extends ActivityDelegate {
         SimpleFacebook.setConfiguration(configuration);
         mSimpleFacebook = SimpleFacebook.getInstance(BBAndroidGame.AndroidGame().GetActivity());
         
-        if (mSimpleFacebook.getSession().getState().equals(SessionState.CREATED_TOKEN_LOADED)) {
+        if (mSimpleFacebook.getSession() != null && mSimpleFacebook.getSession().getState().equals(SessionState.CREATED_TOKEN_LOADED)) {
             mSimpleFacebook.login(mOnInitLoginListener);
         } else {
             if (initListener != null) {
